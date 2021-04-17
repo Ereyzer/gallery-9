@@ -1,4 +1,4 @@
-import './CSS/style.css';
+
 export const refs = {
     galleryList: document.querySelector('.js-gallery'),
     lightbox: document.querySelector('.js-lightbox'),
