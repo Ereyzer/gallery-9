@@ -1,8 +1,8 @@
 
-:root {
-  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  --animation-duration: 250ms;
-}
+
+  $timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  $animation-duration: 250ms;
+
 
 html {
   box-sizing: border-box;
@@ -52,7 +52,7 @@ body {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  transition: transform var(--animation-duration) var(--timing-function);
+  transition: transform $animation-duration $timing-function;
   cursor: pointer;
 }
 
@@ -78,7 +78,7 @@ body {
   height: 100vh;
   opacity: 0;
   pointer-events: none;
-  transition: opacity var(--animation-duration) var(--timing-function);
+  transition: opacity $animation-duration $timing-function;
 }
 
 .lightbox.is-open {
@@ -98,7 +98,7 @@ body {
 
 .lightbox__content {
   transform: scale(0.95);
-  transition: transform var(--animation-duration) var(--timing-function);
+  transition: transform $animation-duration $timing-function;
 }
 
 .lightbox.is-open .lightbox__content {
@@ -129,7 +129,7 @@ body {
   background-color: transparent;
   color: #fff;
   cursor: pointer;
-  transition: background-color var(--animation-duration) var(--timing-function);
+  transition: background-color $animation-duration $timing-function;
   outline: none;
   background-image: url('../images/icon-close.svg');
   background-position: center;
